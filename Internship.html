@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Internships</title>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a663e9",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191121",
+                        "text-light": "#191121",
+                        "text-dark": "#f7f6f8",
+                        "subtle-light": "#968ba3",
+                        "subtle-dark": "#968ba3",
+                        "border-light": "#e8e3ed",
+                        "border-dark": "#32273e",
+                        "card-light": "#ffffff",
+                        "card-dark": "#21162b"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-border-light dark:border-border-dark px-10 py-4">
+            <div class="flex items-center gap-10">
+                <div class="flex items-center gap-2 text-text-light dark:text-text-dark">
+                    <svg class="text-primary size-7" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        
+                    </svg>
+                    <img src="./logos/internnova.png" alt="InternNova Logo" class="h-10">
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-text-light dark:hover:text-text-dark transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-text-light dark:hover:text-text-dark transition-colors"
+                        href="BHIMIntern.html">BHIM Intern</a>
+                    <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-text-light dark:hover:text-text-dark transition-colors"
+                        href="Jobs.html">Jobs</a>
+                    <a class="text-sm font-bold text-primary" href="#">Internships</a>
+                    <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-text-light dark:hover:text-text-dark transition-colors"
+                        href="ProfileMatching.html">Profile Matching</a>
+
+                    <a class="text-sm font-medium text-subtle-light dark:text-subtle-dark hover:text-text-light dark:hover:text-text-dark transition-colors"
+                        href="#">Post New Internship</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative hidden sm:block">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-subtle-light dark:text-subtle-dark">search</span>
+                    <input
+                        class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg bg-background-light dark:bg-card-dark border border-border-light dark:border-border-dark py-2 pl-10 pr-4 text-sm text-text-light dark:text-text-dark placeholder:text-subtle-light dark:placeholder:text-subtle-dark focus:outline-none focus:ring-2 focus:ring-primary"
+                        placeholder="Search" value="" />
+                </div>
+                <button
+                    class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light dark:bg-card-dark text-subtle-light dark:text-subtle-dark hover:bg-primary/10 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <div class="size-10 rounded-full bg-cover bg-center"
+                    style='background-image: url("./user/akshaysahu.png");'>
+                </div>
+            </div>
+        </header>
+        <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="mb-10 text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold text-text-light dark:text-text-dark mb-2">PM Internship Scheme
+                    India</h1>
+                <p class="text-lg text-subtle-light dark:text-subtle-dark">Interns Today, Innovators Tomorrow...
+                </p>
+            </div>
+            <h2 class="text-2xl font-bold text-text-light dark:text-text-dark mb-6 px-2">Participating Companies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a class="group block bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+                    href="#">
+                    <div class="h-40 w-full flex items-center justify-center bg-white">
+                        <img src="./logos/Meesho.png" alt="Meesho Logo" class="max-h-full max-w-full object-contain" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-2">Meesho</h3>
+                        <p class="text-sm text-subtle-light dark:text-subtle-dark line-clamp-3">
+                            Meesho is a fast-growing e-commerce platform that empowers small businesses and
+                            entrepreneurs across India. Known for its innovative approach to social commerce, Meesho is
+                            reshaping the way people buy and sell online. They are offering internships in product
+                            management to give aspiring professionals hands-on experience in building scalable digital
+                            products and solving real-world business challenges.
+                        </p>
+                    </div>
+                </a>
+                <a class="group block bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+                    href="#">
+                    <div class="h-40 w-full flex items-center justify-center bg-white">
+                        <img src="./logos/swiggy.png" alt="Swiggy Logo" class="max-h-full max-w-full object-contain" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-2">Swiggy</h3>
+                        <p class="text-sm text-subtle-light dark:text-subtle-dark line-clamp-3">
+                            Swiggy is India’s leading on-demand delivery platform, revolutionizing the way people access
+                            food, groceries, and essentials. With its tech-driven logistics and customer-first approach,
+                            Swiggy continues to redefine convenience. They are offering internships in product
+                            management to provide hands-on experience in building user-centric solutions and scaling
+                            operations in a fast-paced digital environment.
+
+                        </p>
+                    </div>
+                </a>
+                <a class="group block bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+                    href="#">
+                    <div class="h-40 w-full flex items-center justify-center bg-white">
+                        <img src="./logos/tcs.jpg" alt="Tcs Logo" class="max-h-full max-w-full object-contain" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-2">Tcs</h3>
+                        <p class="text-sm text-subtle-light dark:text-subtle-dark line-clamp-3">
+                            TCS (Tata Consultancy Services) is a global leader in IT services, consulting, and business
+                            solutions. With a strong legacy of innovation and excellence, TCS helps enterprises across
+                            industries harness technology to drive transformation. They are offering internships in
+                            product management to provide hands-on exposure to strategic planning, agile development,
+                            and delivering impactful digital solutions at scale.
+
+                        </p>
+                    </div>
+                </a>
+                <a class="group block bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+                    href="#">
+                    <div class="h-40 w-full flex items-center justify-center bg-white">
+                        <img src="./logos/jambotail.png" alt="Jambotail Logo"
+                            class="max-h-full max-w-full object-contain" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-2">Jambotail</h3>
+                        <p class="text-sm text-subtle-light dark:text-subtle-dark line-clamp-3">
+                            Jumbotail is India’s leading B2B marketplace and new retail platform for food and grocery.
+                            With a mission to empower small retailers, Jumbotail connects thousands of kirana stores and
+                            supermarkets with brands and staple producers through its tech-driven ecosystem. They are
+                            offering internships in product management to provide hands-on experience in reengineering
+                            supply chains, leveraging data science, and building scalable solutions that transform the
+                            retail landscape.
+                        </p>
+                    </div>
+                </a>
+                <a class="group block bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+                    href="#">
+                    <div class="h-40 bg-cover bg-center" style='background-image: url("./logos/delhivery.jpg");'></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-2">Delhivery</h3>
+                        <p class="text-sm text-subtle-light dark:text-subtle-dark line-clamp-3">
+                            Delhivery is a leading integrated logistics and supply chain company based in India. With a
+                            robust tech-driven infrastructure, Delhivery offers end-to-end services including parcel
+                            delivery, warehousing, freight, and cross-border logistics. They are offering internships in
+                            product management to provide hands-on experience in optimizing logistics operations,
+                            designing scalable systems, and solving complex supply chain challenges in a dynamic
+                            business environment.
+                        </p>
+                    </div>
+                </a>
+                <a class="group block bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
+                    href="#">
+                    <div class="h-40 w-full flex items-center justify-center bg-white">
+                        <img src="./logos/classplus.png" alt="Jambotail Logo"
+                            class="max-h-full max-w-full object-contain" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-2">Classplus</h3>
+                        <p class="text-sm text-subtle-light dark:text-subtle-dark line-clamp-3">
+                            Classplus is a leading SaaS platform that empowers educators and coaching institutes to
+                            build and scale their online teaching businesses. With mobile-first technology and robust
+                            tools for content delivery, student engagement, and monetization, Classplus is transforming
+                            the education landscape in India. They are offering internships in product management to
+                            provide hands-on experience in edtech innovation, user-centric design, and building scalable
+                            digital solutions for the learning ecosystem.
+                        </p>
+                    </div>
+                </a>
+                <hr>
+                <p><b> and many more to come.....</b></p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

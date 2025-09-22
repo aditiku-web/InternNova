@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --primary-color: #7C3AED;
+      --background-light: #F5F3FF;
+      --background-dark: #1F2937;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "var(--primary-color)",
+            "background-light": "var(--background-light)",
+            "background-dark": "var(--background-dark)",
+          },
+          fontFamily: {
+            display: ["Manrope"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            lg: "0.75rem",
+            xl: "1rem",
+            full: "9999px"
+          },
+        },
+      },
+    };
+  </script>
+  <title>Recruitment Platform</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100">
+  <div class="flex h-screen w-full">
+    <aside class="w-80 border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 flex flex-col">
+      <div class="flex items-center gap-3 mb-10">
+        <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_6_535)">
+
+          </g>
+          <defs>
+            <clipPath id="clip0_6_535">
+              <rect fill="white" height="48" width="48"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+        <img src="./logos/internnova.png" alt="InternNova Logo" class="h-10">
+      </div>
+      <div class="space-y-6">
+        <div>
+          <h2 class="text-sm font-semibold mb-4 text-gray-500 dark:text-gray-400 tracking-wider uppercase">Filters</h2>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="skill-set">Skill
+                Set</label>
+              <select
+                class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-primary focus:border-primary transition"
+                id="skill-set">
+                <option>Select Skill Set</option>
+                <option>Web Development</option>
+                <option>Data Science</option>
+                <option>UX/UI Design</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                for="location">Location</label>
+              <select
+                class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-primary focus:border-primary transition"
+                id="location">
+                <option>Select Location</option>
+                <option>Delhi, India</option>
+                <option>Bengaluru, India</option>
+                <option>Mumbai, India</option>
+                <option>Jamshedpur, India</option>
+                <option>Remote</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                for="education-level">Education Level</label>
+              <select
+                class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-primary focus:border-primary transition"
+                id="education-level">
+                <option>Select Education Level</option>
+                <option>Intermediate</option>
+                <option>Bachelors</option>
+                <option>Masters</option>
+                <option>PhD</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="flex-1 flex flex-col">
+      <header
+        class="flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-8 py-4 bg-white dark:bg-gray-800">
+        <nav class="flex items-center gap-8 text-sm font-medium text-gray-500 dark:text-gray-400">
+          <a class="hover:text-primary transition" href="index.html">Home</a>
+          <a class="hover:text-primary transition" href="BHIMIntern.html">BHIM Intern</a>
+          <a class="hover:text-primary transition" href="Jobs.html">Jobs</a>
+          <a class="hover:text-primary transition" href="Internship.html">Internships</a>
+          <a class="hover:text-primary transition" href="ProfileMatching.html">Profile Matching</a>
+          <a class="text-sm font-medium text-primary" href="#">Post New Internship</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+            <span class="material-symbols-outlined"> notifications </span>
+          </button>
+          <img alt="User Avatar" class="size-10 rounded-full" src="./user/akshaysahu.png" />
+        </div>
+      </header>
+      <main class="flex-1 p-8 overflow-y-auto">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Post New Internship</h2>
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm">
+            <form class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  for="internship-title">Internship Title</label>
+                <input
+                  class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700/50 text-gray-900 dark:text-white focus:ring-primary focus:border-primary transition"
+                  id="internship-title" placeholder="e.g., Frontend Developer Intern" type="text" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  for="required-skills">Required Skills</label>
+                <input
+                  class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700/50 text-gray-900 dark:text-white focus:ring-primary focus:border-primary transition"
+                  id="required-skills" placeholder="e.g., React, Tailwind CSS, JavaScript" type="text" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  for="form-location">Location</label>
+                <input
+                  class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700/50 text-gray-900 dark:text-white focus:ring-primary focus:border-primary transition"
+                  id="form-location" placeholder="e.g., Delhi, Bengaluru , Mumbai or Remote" type="text" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="stipend">Stipend
+                  (per month)</label>
+                <input
+                  class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700/50 text-gray-900 dark:text-white focus:ring-primary focus:border-primary transition"
+                  id="stipend" placeholder="e.g., ₹20,000" type="text" />
+              </div>
+              <div class="flex justify-end pt-6">
+                <button
+                  class="px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark transition-all duration-300 ease-in-out shadow-lg hover:shadow-primary/40"
+                  type="submit">
+                  Post Internship
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>

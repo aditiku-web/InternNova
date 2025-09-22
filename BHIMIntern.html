@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#7C3AED", // A deep lavender color
+            "background-light": "#F3E8FF", // A very light lavender
+            "background-dark": "#1F2937", // Kept dark for contrast
+            "card-light": "#FFFFFF",
+            "card-dark": "#2D3748",
+            "text-light": "#111827",
+            "text-dark": "#F9FAFB",
+            "text-muted-light": "#6B7280",
+            "text-muted-dark": "#D1D5DB"
+          },
+          fontFamily: {
+            display: ["Manrope"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <title>BHIM Intern</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark">
+  <div class="flex flex-col min-h-screen">
+    <header
+      class="bg-card-light dark:bg-card-dark/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-white/10 sticky top-0 z-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center gap-4 text-gray-800 dark:text-white">
+            <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+
+            </svg>
+            <img src="./logos/internnova.png" alt="InternNova Logo" class="h-10">
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="home.html">Home</a>
+            <a class="text-sm font-bold text-primary dark:text-primary" href="#">BHIM Intern</a>
+            <a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="Jobs.html">Jobs</a>
+            <a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="#">Resources</a>
+            <a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="ProfileMatching.html">Profile Matching</a>
+            <a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="RecriutmentP.html">Post New Internship</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="relative rounded-full p-2 text-text-muted-light dark:text-text-muted-dark hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-card-light dark:focus:ring-offset-card-dark">
+              <span class="material-symbols-outlined"> notifications </span>
+            </button>
+            <img alt="User profile" class="h-10 w-10 rounded-full" src="./user/akshaysahu.png" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg p-6 md:p-8 mb-12">
+          <div class="flex flex-col md:flex-row items-start gap-6">
+            <img alt="Bharat Interface For Money" class="h-24 w-24 rounded-lg object-contain" src="./logos/bhim.avif" />
+            <div class="flex-grow">
+              <h2 class="text-3xl font-bold text-text-light dark:text-text-dark">Bharat Interface For Money</h2>
+              <p class="mt-1 text-lg text-text-muted-light dark:text-text-muted-dark">Mumbai, India</p>
+            </div>
+          </div>
+        </div>
+        <h2 class="text-2xl font-bold text-text-light dark:text-text-dark px-4 pb-4">Recommended Candidates</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-primary/20">
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <img alt="Aditi Roy" class="h-16 w-16 rounded-full object-cover" src="./user/aditi.jpg" />
+                <div>
+                  <h3 class="text-lg font-bold text-text-light dark:text-text-dark">Aditi Roy</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">B.S. in Computer Science, Stanford
+                    University</p>
+                </div>
+              </div>
+              <div class="mt-4 space-y-2 text-sm text-text-light dark:text-text-muted-dark">
+                <p><strong class="font-semibold">Skills:</strong> Python, Java, Machine Learning</p>
+                <p><strong class="font-semibold">Location:</strong> Mumbai, India</p>
+                <p><strong class="font-semibold">Match:</strong> <span class="text-primary font-bold">92%</span></p>
+              </div>
+            </div>
+            <div class="px-6 py-4 bg-background-light/50 dark:bg-card-dark/50 flex gap-4">
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary text-white hover:bg-primary/90 transition-colors">Contact</button>
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors">View
+                Resume</button>
+            </div>
+          </div>
+          <div
+            class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-primary/20">
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <img alt="Akshay Sahu" class="h-16 w-16 rounded-full object-cover" src="./user/akshaysahu.png" />
+                <div>
+                  <h3 class="text-lg font-bold text-text-light dark:text-text-dark">Akshay Sahu</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">M.S. in Electrical Engineering, MIT
+                  </p>
+                </div>
+              </div>
+              <div class="mt-4 space-y-2 text-sm text-text-light dark:text-text-muted-dark">
+                <p><strong class="font-semibold">Skills:</strong> VHDL, Embedded Systems, C++</p>
+                <p><strong class="font-semibold">Location:</strong> Bhilai, India</p>
+                <p><strong class="font-semibold">Match:</strong> <span class="text-primary font-bold">88%</span></p>
+              </div>
+            </div>
+            <div class="px-6 py-4 bg-background-light/50 dark:bg-card-dark/50 flex gap-4">
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary text-white hover:bg-primary/90 transition-colors">Contact</button>
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors">View
+                Resume</button>
+            </div>
+          </div>
+          <div
+            class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-primary/20">
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <img alt="Shivam Kumar Kunwar" class="h-16 w-16 rounded-full object-cover" src="./user/shivam.jpg" />
+                <div>
+                  <h3 class="text-lg font-bold text-text-light dark:text-text-dark">Shivam Kumar Kunwar</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">B.tech in CSE </p>
+                </div>
+              </div>
+              <div class="mt-4 space-y-2 text-sm text-text-light dark:text-text-muted-dark">
+                <p><strong class="font-semibold">Skills:</strong> Web Development, C++, C# , Java, Javascript</p>
+                <p><strong class="font-semibold">Location:</strong> Jamshedpur, India</p>
+                <p><strong class="font-semibold">Match:</strong> <span class="text-primary font-bold">85%</span></p>
+              </div>
+            </div>
+            <div class="px-6 py-4 bg-background-light/50 dark:bg-card-dark/50 flex gap-4">
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary text-white hover:bg-primary/90 transition-colors">Contact</button>
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors">View
+                Resume</button>
+            </div>
+          </div>
+          <div
+            class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-primary/20">
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <img alt="Aditya Kumar" class="h-16 w-16 rounded-full object-cover" src="./user/aditya.jpg" />
+                <div>
+                  <h3 class="text-lg font-bold text-text-light dark:text-text-dark">Aditya Kumar</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Ph.D. in Physics, Caltech</p>
+                </div>
+              </div>
+              <div class="mt-4 space-y-2 text-sm text-text-light dark:text-text-muted-dark">
+                <p><strong class="font-semibold">Skills:</strong> Quantum Computing, Data Science</p>
+                <p><strong class="font-semibold">Location:</strong> Bangalore, India</p>
+                <p><strong class="font-semibold">Match:</strong> <span class="text-primary font-bold">82%</span></p>
+              </div>
+            </div>
+            <div class="px-6 py-4 bg-background-light/50 dark:bg-card-dark/50 flex gap-4">
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary text-white hover:bg-primary/90 transition-colors">Contact</button>
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors">View
+                Resume</button>
+            </div>
+          </div>
+          <div
+            class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-primary/20">
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <img alt="Animesh Bhawnani" class="h-16 w-16 rounded-full object-cover" src="./user/animesh.jpg" />
+                <div>
+                  <h3 class="text-lg font-bold text-text-light dark:text-text-dark">Animesh Bhawnani</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Ph.D. in Physics, Caltech</p>
+                </div>
+              </div>
+              <div class="mt-4 space-y-2 text-sm text-text-light dark:text-text-muted-dark">
+                <p><strong class="font-semibold">Skills:</strong> Quantum Computing, Data Science</p>
+                <p><strong class="font-semibold">Location:</strong> Delhi, India</p>
+                <p><strong class="font-semibold">Match:</strong> <span class="text-primary font-bold">82%</span></p>
+              </div>
+            </div>
+            <div class="px-6 py-4 bg-background-light/50 dark:bg-card-dark/50 flex gap-4">
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary text-white hover:bg-primary/90 transition-colors">Contact</button>
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors">View
+                Resume</button>
+            </div>
+          </div>
+          <div
+            class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-primary/20">
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <img alt="Akshat Rahangdale" class="h-16 w-16 rounded-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUef1Zu2fzkndQrBZ7VRX7wXezsqaHLB8n08zLxuQ9HxWXnyQ90Qz6PXJ5uuxCnTZg1QvrwRqMAtbj8wdMSokUWuROqiuzIUzE8hGBQPiSCFWrM2xKpd7wQ26yLM48hknaClin8XksGXiIfs6QwAXChWoir93ojHOLzcm4BW8IgxOVdFoP9jH9QQqEPX4_61N4YB0bX3B9cOZ-LpgOx0Ez3RqYYZEiem5XAnUq-LEYszhevrIrDxs1V6v5NVLGTwEQ3-G9_OcWk_jo" />
+                <div>
+                  <h3 class="text-lg font-bold text-text-light dark:text-text-dark">Akshat Rahangdale</h3>
+                  <p class="text-sm text-text-muted-light dark:text-text-muted-dark">B.S. in Mechanical Eng., UMichigan
+                  </p>
+                </div>
+              </div>
+              <div class="mt-4 space-y-2 text-sm text-text-light dark:text-text-muted-dark">
+                <p><strong class="font-semibold">Skills:</strong> CAD, Thermodynamics, Robotics</p>
+                <p><strong class="font-semibold">Location:</strong> Kerela, India</p>
+                <p><strong class="font-semibold">Match:</strong> <span class="text-primary font-bold">79%</span></p>
+              </div>
+            </div>
+            <div class="px-6 py-4 bg-background-light/50 dark:bg-card-dark/50 flex gap-4">
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary text-white hover:bg-primary/90 transition-colors">Contact</button>
+              <button
+                class="flex-1 text-sm font-semibold rounded-lg py-2 px-4 bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors">View
+                Resume</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

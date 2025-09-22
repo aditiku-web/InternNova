@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Profile Matching</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#7C3AED",
+            "background-light": "#F5F3FF",
+            "background-dark": "#101922",
+            "card-light": "#FFFFFF",
+            "text-primary": "#1E293B",
+            "text-secondary": "#64748B",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+          keyframes: {
+            starBurst: {
+              '0%': {
+                transform: 'scale(0)',
+                opacity: '0'
+              },
+              '50%': {
+                transform: 'scale(1.5)',
+                opacity: '1'
+              },
+              '100%': {
+                transform: 'scale(1)',
+                opacity: '1'
+              },
+            },
+            emojiBounce: {
+              '0%, 100%': { transform: 'translateY(-10%)', animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)' },
+              '50%': { transform: 'translateY(0)', animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)' }
+            },
+            fill: {
+              '0%': { width: '0%' },
+              '100%': { width: 'var(--fill-width, 0%)' },
+            }
+          },
+          animation: {
+            starBurst: 'starBurst 0.5s ease-out forwards',
+            emojiBounce: 'emojiBounce 1s infinite',
+            fill: 'fill 1.5s ease-in-out forwards 0.3s'
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .animate-star-1 { animation-delay: 0.1s; }
+      .animate-star-2 { animation-delay: 0.2s; }
+      .animate-star-3 { animation-delay: 0.3s; }
+      .animate-star-4 { animation-delay: 0.4s; }
+      .animate-star-5 { animation-delay: 0.5s; }
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary dark:text-white">
+  <div class="flex flex-col min-h-screen">
+    <header
+      class="bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-20 border-b border-primary/20 dark:border-primary/30">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center gap-8">
+            <a class="flex items-center gap-2 text-text-primary dark:text-white" href="#">
+              <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_535)">
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_535">
+                    <rect fill="white" height="48" width="48"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <img src="./logos/internnova.png" alt="InternNova Logo" class="h-10">
+            </a>
+            <nav class="hidden md:flex items-center gap-6">
+              <a class="text-sm font-medium text-text-secondary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                href="index.html">Home</a>
+              <a class="text-sm font-medium text-text-secondary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                href="BHIMIntern.html">BHIM Intern</a>
+              <a class="text-sm font-medium text-text-secondary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                href="#">Jobs</a>
+              <a class="text-sm font-medium text-text-secondary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                href="Internship.html">Internships</a>
+              <a class="text-sm font-medium text-primary" href="#">Profile Matching</a>
+              <a class="text-sm font-medium text-text-secondary dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                href="RecriutmentP.html">Post New Internship</a>
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="relative hidden sm:block">
+              <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+              <input
+                class="w-full rounded-full border border-primary/20 bg-background-light dark:bg-background-dark/50 py-2 pl-10 pr-4 text-sm text-text-primary dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                placeholder="Search" value="" />
+            </div>
+            <div class="h-10 w-10 shrink-0">
+              <img alt="User profile picture" class="h-full w-full rounded-full object-cover"
+                src="./user/akshaysahu.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1 space-y-8">
+          <div
+            class="bg-card-light dark:bg-background-dark rounded-xl p-6 shadow-sm border border-primary/10 dark:border-primary/20">
+            <div class="flex flex-col items-center text-center">
+              <img alt="Akshay Sahu" class="h-32 w-32 rounded-full object-cover mb-4" src="./user/akshaysahu.png" />
+              <h1 class="text-2xl font-bold text-text-primary dark:text-white">Akshay Sahu</h1>
+              <p class="text-base text-text-secondary dark:text-gray-400">BTech, Computer Science</p>
+              <div class="mt-4 flex flex-wrap justify-center gap-2">
+                <span class="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">Python</span>
+                <span class="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">SQL</span>
+                <span class="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">Marketing</span>
+              </div>
+              <div class="mt-4 flex items-center text-text-secondary dark:text-gray-400">
+                <span class="material-symbols-outlined text-lg mr-1">location_on</span>
+                <span class="text-sm">Location Preference: Remote</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-card-light dark:bg-background-dark rounded-xl p-6 shadow-sm border border-primary/10 dark:border-primary/20">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="material-symbols-outlined text-3xl text-primary">auto_awesome</span>
+              <h2 class="text-xl font-bold text-text-primary dark:text-white">Boost Your Score</h2>
+            </div>
+            <p class="text-sm text-text-secondary dark:text-gray-400 mb-6">Complete these tasks to improve your match
+              scores and stand out to recruiters.</p>
+            <div class="space-y-4">
+              <a class="flex items-center p-4 rounded-lg bg-background-light dark:bg-background-dark/50 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-primary mr-4">school</span>
+                <div class="flex-grow">
+                  <p class="font-semibold text-text-primary dark:text-white">Take a Skill Assessment</p>
+                  <p class="text-xs text-text-secondary dark:text-gray-400">Prove your expertise in Python.</p>
+                </div>
+                <span class="material-symbols-outlined text-text-secondary dark:text-gray-400">chevron_right</span>
+              </a>
+              <a class="flex items-center p-4 rounded-lg bg-background-light dark:bg-background-dark/50 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-primary mr-4">description</span>
+                <div class="flex-grow">
+                  <p class="font-semibold text-text-primary dark:text-white">Update Your Resume</p>
+                  <p class="text-xs text-text-secondary dark:text-gray-400">Add more details about your projects.</p>
+                </div>
+                <span class="material-symbols-outlined text-text-secondary dark:text-gray-400">chevron_right</span>
+              </a>
+              <a class="flex items-center p-4 rounded-lg bg-background-light dark:bg-background-dark/50 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors"
+                href="#">
+                <span class="material-symbols-outlined text-primary mr-4">add_circle</span>
+                <div class="flex-grow">
+                  <p class="font-semibold text-text-primary dark:text-white">Add "Data Analysis" Skill</p>
+                  <p class="text-xs text-text-secondary dark:text-gray-400">Recommended for Product Design roles.</p>
+                </div>
+                <span class="material-symbols-outlined text-text-secondary dark:text-gray-400">chevron_right</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-bold mb-6 text-text-primary dark:text-white">Recommended Internships</h2>
+          <div class="grid grid-cols-1 gap-6">
+            <div
+              class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-green-500/20 dark:border-green-500/30 relative overflow-hidden">
+              <div class="absolute inset-0 bg-green-100 dark:bg-green-900/30 w-0 animate-fill"
+                style="--fill-width: 92%;"></div>
+              <div class="relative p-6">
+                <div class="flex flex-col sm:flex-row gap-6">
+                  <div class="flex-shrink-0">
+                    <img alt="Company Logo" class="h-20 w-20 rounded-lg object-cover" src="./logos/seekho.png" />
+                  </div>
+                  <div class="flex-grow">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <p class="text-lg font-bold text-text-primary dark:text-white">Seekho</p>
+                        <p class="text-base text-text-secondary dark:text-gray-400">Seekho • Remote</p>
+                      </div>
+                      <div class="flex flex-col items-center gap-1">
+                        <div class="flex items-center">
+                          <span
+                            class="material-symbols-outlined text-green-500 text-2xl animate-starBurst animate-star-1 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-green-500 text-2xl animate-starBurst animate-star-2 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-green-500 text-2xl animate-starBurst animate-star-3 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-green-500 text-2xl animate-starBurst animate-star-4 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-green-500 text-2xl animate-starBurst animate-star-5 opacity-0">star</span>
+                        </div>
+                        <span class="text-4xl animate-emojiBounce mt-2">🤩</span>
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <p class="text-sm font-bold text-green-600 dark:text-green-400 mb-1">Match Score: 92% (Excellent)
+                      </p>
+                      <p class="text-xs text-text-secondary dark:text-gray-400 mt-1">Skills Matched: 5/5</p>
+                    </div>
+                    <button
+                      class="w-full sm:w-auto rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50">Apply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-yellow-500/20 dark:border-yellow-500/30 relative overflow-hidden">
+              <div class="absolute inset-0 bg-yellow-100 dark:bg-yellow-900/30 w-0 animate-fill"
+                style="--fill-width: 78%;"></div>
+              <div class="relative p-6">
+                <div class="flex flex-col sm:flex-row gap-6">
+                  <div class="flex-shrink-0">
+                    <img alt="Company Logo" class="h-20 w-20 rounded-lg object-cover" src="./logos/zepto.jpg" />
+                  </div>
+                  <div class="flex-grow">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <p class="text-lg font-bold text-text-primary dark:text-white">Zepto</p>
+                        <p class="text-base text-text-secondary dark:text-gray-400">Zepto • Bengaluru, India
+                        </p>
+                      </div>
+                      <div class="flex flex-col items-center gap-1">
+                        <div class="flex items-center">
+                          <span
+                            class="material-symbols-outlined text-yellow-500 text-2xl animate-starBurst animate-star-1 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-yellow-500 text-2xl animate-starBurst animate-star-2 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-yellow-500 text-2xl animate-starBurst animate-star-3 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-yellow-500 text-2xl animate-starBurst animate-star-4 opacity-0">star</span>
+                          <span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-2xl">star</span>
+                        </div>
+                        <span class="text-4xl animate-emojiBounce mt-2">🙂</span>
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <p class="text-sm font-bold text-yellow-600 dark:text-yellow-400 mb-1">Match Score: 78% (Good)</p>
+                      <p class="text-xs text-text-secondary dark:text-gray-400 mt-1">Skills Matched: 3/5</p>
+                    </div>
+                    <button
+                      class="w-full sm:w-auto rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50">Apply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-yellow-500/20 dark:border-yellow-500/30 relative overflow-hidden">
+              <div class="absolute inset-0 bg-yellow-100 dark:bg-yellow-900/30 w-0 animate-fill"
+                style="--fill-width: 65%;"></div>
+              <div class="relative p-6">
+                <div class="flex flex-col sm:flex-row gap-6">
+                  <div class="flex-shrink-0">
+                    <img alt="Company Logo" class="h-20 w-20 rounded-lg object-cover" src="./logos/classplus.png" />
+                  </div>
+                  <div class="flex-grow">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <p class="text-lg font-bold text-text-primary dark:text-white">ClassPlus</p>
+                        <p class="text-base text-text-secondary dark:text-gray-400">ClassPlus • Remote
+                        </p>
+                      </div>
+                      <div class="flex flex-col items-center gap-1">
+                        <div class="flex items-center">
+                          <span
+                            class="material-symbols-outlined text-yellow-500 text-2xl animate-starBurst animate-star-1 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-yellow-500 text-2xl animate-starBurst animate-star-2 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-yellow-500 text-2xl animate-starBurst animate-star-3 opacity-0">star</span>
+                          <span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-2xl">star</span>
+                          <span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-2xl">star</span>
+                        </div>
+                        <span class="text-4xl animate-emojiBounce mt-2">🙂</span>
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <p class="text-sm font-bold text-yellow-600 dark:text-yellow-400 mb-1">Match Score: 65% (Medium)
+                      </p>
+                      <p class="text-xs text-text-secondary dark:text-gray-400 mt-1">Skills Matched: 2/5</p>
+                    </div>
+                    <button
+                      class="w-full sm:w-auto rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50">Apply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-red-500/20 dark:border-red-500/30 relative overflow-hidden">
+              <div class="absolute inset-0 bg-red-100 dark:bg-red-900/30 w-0 animate-fill" style="--fill-width: 45%;">
+              </div>
+              <div class="relative p-6">
+                <div class="flex flex-col sm:flex-row gap-6">
+                  <div class="flex-shrink-0">
+                    <img alt="Company Logo" class="h-20 w-20 rounded-lg object-cover" src="./logos/delhivery.jpg" />
+                  </div>
+                  <div class="flex-grow">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <p class="text-lg font-bold text-text-primary dark:text-white">Delhivery</p>
+                        <p class="text-base text-text-secondary dark:text-gray-400">Delhivery • Gurgaon</p>
+                      </div>
+                      <div class="flex flex-col items-center gap-1">
+                        <div class="flex items-center">
+                          <span
+                            class="material-symbols-outlined text-red-500 text-2xl animate-starBurst animate-star-1 opacity-0">star</span>
+                          <span
+                            class="material-symbols-outlined text-red-500 text-2xl animate-starBurst animate-star-2 opacity-0">star</span>
+                          <span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-2xl">star</span>
+                          <span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-2xl">star</span>
+                          <span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-2xl">star</span>
+                        </div>
+                        <span class="text-4xl animate-emojiBounce mt-2">😕</span>
+                      </div>
+                    </div>
+                    <div class="my-3">
+                      <p class="text-sm font-bold text-red-600 dark:text-red-400 mb-1">Match Score: 45% (Low)</p>
+                      <p class="text-xs text-text-secondary dark:text-gray-400 mt-1">Skills Matched: 1/5</p>
+                    </div>
+                    <button
+                      class="w-full sm:w-auto rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50">Apply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
